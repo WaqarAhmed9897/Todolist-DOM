@@ -16,18 +16,17 @@ function add() {
     var editButton = document.createElement("button")
     editButton.innerHTML = '<i class="fas fa-edit"></i> Edit'
     editButton.setAttribute('onClick', 'edit(this)')
-    editButton.setAttribute('class', 'btn btn-warning mx-3')
+    editButton.setAttribute('class', 'btn btn-warning mx-2')
     // Create Delete Button
     var deleteButton = document.createElement("button")
     deleteButton.innerHTML = '<i class="fas fa-trash"></i> Delete'
     deleteButton.setAttribute('onClick', 'deletetodo(this)')
-    deleteButton.setAttribute('class', 'btn btn-danger')
+    deleteButton.setAttribute('class', 'btn btn-danger mx-2')
 
     //Create Completed Button
     var completeButton = document.createElement("button")
     completeButton.innerHTML = '<i class="fas fa-check-circle"></i> Completed'
-    completeButton.setAttribute('class', 'btn btn-success')
-    completeButton.style.marginLeft = '3px'
+    completeButton.setAttribute('class', 'btn btn-success mx-2')
     completeButton.setAttribute('onClick', 'completedtodo(this)')
 
 
@@ -54,9 +53,5 @@ function deleteAll() {
     parentList.innerHTML = ""
 }
 function completedtodo(ele) {
-    // console.log(ele.previousSibling.previousSibling.previousSibling);
-    // ele.previousSibling.previousSibling.previousSibling
-    // btn.parentNode.className = "liLine";
     ele.parentNode.className = 'lilist'
-    
 }
